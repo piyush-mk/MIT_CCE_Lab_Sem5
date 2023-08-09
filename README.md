@@ -1,2 +1,2 @@
-# AP_LAB_MIT_Sem5
-Advanced Programming Lab, Manipal Institute of Technology
+# MIT_CCE_Lab_Sem5
+5th Semester CCE Labs, Manipal Institute of Technology
