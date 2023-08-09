@@ -1,0 +1,39 @@
+SELECT COUNT(DISTINCT p.driver_id)
+FROM Person p
+JOIN Owns o ON p.driver_id = o.driver_id
+JOIN Car c ON o.regno = c.regno
+JOIN Participated pa ON o.regno = pa.regno
+JOIN Accident a ON pa.report_number = a.report_number
+WHERE EXTRACT(YEAR FROM a.accd_date) = 2008;
+
+SELECT COUNT(DISTINCT A.report_number) as num_accidents
+FROM Accident A
+JOIN Participated P ON A.report_number = P.report_number
+JOIN Car C ON P.regno = C.regno
+WHERE C.model = 'your_model';
+
+
+SELECT Person.name AS OWNER_NAME, COUNT(Participated.report_number) AS `No. of Accidents`, SUM(Participated.damage_amount) AS `Total Damage Amount`
+FROM Person
+INNER JOIN Owns ON Person.driver_id = Owns.driver_id
+INNER JOIN Participated ON Owns.regno = Participated.regno
+GROUP BY Person.name
+ORDER BY `Total Damage Amount` DESC;
+
+
+SELECT p.name, c.model, YEAR(a.accd_date) as year, COUNT(*) as num_accidents
+FROM Person p
+JOIN Owns o ON p.driver_id = o.driver_id
+JOIN Car c ON o.regno = c.regno
+JOIN Participated pa ON o.driver_id = pa.driver_id AND o.regno = pa.regno AND pa.report_number IN (SELECT report_number FROM Accident WHERE YEAR(accd_date) = YEAR(pa.accd_date))
+JOIN Accident a ON pa.report_number = a.report_number
+GROUP BY p.driver_id, YEAR(pa.accd_date), c.model
+HAVING COUNT(*) > 2;
+
+
+SELECT *
+FROM Person
+WHERE driver_id NOT IN (
+    SELECT DISTINCT driver_id
+    FROM Participated
+);
