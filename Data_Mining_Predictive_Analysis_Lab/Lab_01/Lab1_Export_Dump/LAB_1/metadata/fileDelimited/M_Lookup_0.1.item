@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:DelimitedFileConnection xmi:id="_b_H0wDZ3Ee6YOaXFOm9L9A" name="M_Lookup" id="_b_HNsDZ3Ee6YOaXFOm9L9A" dataPackage="_b_H0wTZ3Ee6YOaXFOm9L9A" Server="Localhost 127.0.0.1" FilePath="D:/210953220/Lab_01/Dataset/Join_Lookup.csv" Format="WINDOWS" Encoding="US-ASCII" FieldSeparatorValue="&quot;,&quot;" RowSeparatorValue="&quot;\n&quot;" UseHeader="true" HeaderValue="1" FooterValue="0" LimitValue="" FirstLineCaption="true" EscapeType="CSV" EscapeChar="&quot;\&quot;&quot;" TextEnclosure="&quot;\&quot;&quot;" CsvOption="true" FieldSeparatorType="Comma"/>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_b_H0wTZ3Ee6YOaXFOm9L9A" name="default" dataManager="_b_H0wDZ3Ee6YOaXFOm9L9A">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_b_H0wjZ3Ee6YOaXFOm9L9A" id="_H6jTMDZ3Ee6YOaXFOm9L9A" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_b_H0wzZ3Ee6YOaXFOm9L9A" label="Product_id" length="4" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_b_H0xDZ3Ee6YOaXFOm9L9A" label="Total_expenditure" length="4" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>
