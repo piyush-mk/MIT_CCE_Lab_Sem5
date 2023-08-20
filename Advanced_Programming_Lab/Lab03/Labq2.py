@@ -1,11 +1,6 @@
-def main():
-    lst = []
-    while True:
-        num = int(input("Enter a number (-9999): "))
-        if num == -9999: break
-        lst.append(num)
-    uniquer(lst)
-
 def uniquer(lst):
     print(set(lst))
-main()
+
+input_str = input("Enter a list of numbers separated by spaces: ")
+input_list = [item for item in input_str.split()]
+uniquer(input_list)

@@ -1,12 +1,11 @@
-# Python program to find number of
-# local variables in a function
+def count_local_variables():
+    var1 = 10
+    var2 = "hello"
+    var3 = [1, 2, 3]
+    var4 = {"a": 1, "b": 2}
+    
+    local_variables = locals()
+    return len(local_variables)
 
-def check1():
-	pass
-
-def fun2():
-	a, b, c = 1, 2.25, 333
-	str = 'GeeksForGeeks'
-
-print("Number of local variable in check 1 fun: ",check1.__code__.co_nlocals)
-print("Number of local variable in fun2 fun:",fun2.__code__.co_nlocals)
+num_local_variables = count_local_variables()
+print("Number of local variables:", num_local_variables)

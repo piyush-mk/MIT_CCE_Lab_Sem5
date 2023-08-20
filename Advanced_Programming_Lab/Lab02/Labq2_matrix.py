@@ -44,5 +44,4 @@ def main():
     else:
         print("Matrix addition not possible. Matrix orders are different.")
 
-if __name__ == "__main__":
-    main()
+main()
